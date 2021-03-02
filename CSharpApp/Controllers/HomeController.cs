@@ -65,6 +65,7 @@ namespace CSharpApp.Controllers
         }
 
         [Route("/callback")]
+        [Route("/login/jd-oauth2")]
         public async Task<IActionResult> Callback(string code, string state)
         {
             Dictionary<string, object> oAuthMetadata = await GetOAuthMetadata(_settings.WellKnown);
